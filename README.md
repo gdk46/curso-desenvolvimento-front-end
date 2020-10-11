@@ -1,2 +1,2 @@
-# curso-desenvolvimento-front-end
+# Cursos desenvolvimento front-end
 Projetos desenvovido durante minha aventuras no Front-End
