@@ -5,4 +5,4 @@
 Informações do projeto
 
 
-![picture alt](p1.png)
+![picture alt](projeto/p1.png)
