@@ -2,10 +2,6 @@
 
 **Desenvolvimento de aplicações web responsivas**
 
-![picture alt](projeto/p1.png)
-Cabeçalho do projeto e apresentação da pagina principal.
-
-
 ![picture alt](projeto/p2.jpg)
 Layout completo do projeto.
 
