@@ -6,7 +6,7 @@
 Cabeçalho do projeto e apresentação da pagina principal.
 
 
-![picture alt](projeto/p2.png)
+![picture alt](projeto/p2.jpg)
 Layout completo do projeto.
 
 
