@@ -1,0 +1,57 @@
+/* ===== RESTE ====== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    outline: none;
+    text-decoration: none;
+    font-size: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+h1{
+    font-size: 2.5rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+h3{
+    font-size: 1.75rem;
+}
+
+h4{
+    font-size: 1.5rem;
+}
+
+h5{
+    font-size: 1.25rem;
+}
+
+h6{
+    font-size: 1rem;
+}
+
+
+/* ===== LAYOUT ====== */
+
+.card{
+    border-radius: 10px;
+    background-color: #ffffff;
+    border: 1px solid #313131;    
+    padding: 50px;
+    margin: 20px;
+    min-width:200px;
+}
+
+.card .footer{
+    margin-top: 10px;
+}

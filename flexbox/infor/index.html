@@ -15,7 +15,7 @@
 
 <body>
 	<div class="wallpaper">
-		<!--  -->
+		<!--  SIDERBAR -->
 		<nav class="sidebar">
 			<div>
 				<h2>Flex Container</h2>
@@ -44,22 +44,22 @@
 		<!--  -->
 
 		<!--  -->
-		<div class="main">
+		<div class="content">
 			<header class="header">
 
 				<h1>Guia Flexbox</h1>
 			</header>
 			<article class="main-item">
-				<header class="main-item-title">
+				<div class="item-title">
 					<h1>Flex Container</h1>
 					<p>
 						O Flex Container é a tag que envolve os itens flex, ao indicar display: flex, essa tag passa a
 						ser um Flex Container.
 					</p>
-				</header>
-				<section class="propriedade" id="display">
+				</div>
+				<section id="display">
 					<h2>display</h2>
-					<div class="propriedade-content">
+					<div class="section-content">
 						<div>
 							<p>Define o elemento como um flex container, tornando os seus filhos flex-itens.</p>
 						</div>
@@ -70,9 +70,9 @@
 					
 				</section>
 
-				<section class="propriedade" id="flex-direction">
+				<section id="flex-direction">
 					<h2>flex-direction</h2>
-					<div class="propriedade-content">
+					<div class="section-content">
 						<div>
 							<p>Define a direção dos flex itens por padrão ele é row.</p>
 							
@@ -90,15 +90,16 @@
 					
 				</section>
 
-				<section class="propriedade" id="flex-wrap">
+				<section id="flex-wrap">
 					<h2>3  flex-wrap</h2>
-					<div class="propriedade-content">
+					<div class="section-content">
 						<div>
-							<p>Define se os itens devem quebrar ou não a linha. Por padrão eles não quebram linha, isso
-								faz com que os flex itens sejam compactados além do limite do conteúdo.</p>
-							<p>Essa é geralmente uma propriedade que é quase sempre definida como flex-wrap: wrap; Pois
-								assim quando um dos flex itens atinge o limite do conteúdo, o último item passa para a
-								coluna debaixo e assim por diante.</p>
+							<p>
+								A propriedade CSS flex-wrap define se os itens flexíveis são forçados a ficarem na 
+								mesma linha ou se podem ser quebradas em varias linhas. Se o argumento for valido, 
+								ele define a direção em que as linhas são empilhadas.
+							</p>
+
 						</div>
 						<ul>
 							<li>flex-wrap: <em>nowrap;</em> <span>// Valor padrão, não permite a quebra de linha.</span>
@@ -113,15 +114,14 @@
 					
 				</section>
 
-				<section class="propriedade" id="flex-flow">
+				<section id="flex-flow">
 					<h2>4  flex-flow</h2>
-					<div class="propriedade-content">
+					<div class="section-content">
 						<div>
-							<p>O flex-flow é um atalho para as propriedades flex-direction e flex-wrap. Você não verá
-								muito o seu uso, pois geralmente quando mudamos o flex-direction para column, mantemos o
-								padrão do flex-wrap que é nowrap.
-								<p>E quando mudamos o flex-wrap para wrap, mantemos o padrão do flex-direction que é
-									row.</p>
+							<p>
+								A propriedade CSS flex-flow é uma junção das propriedades flex-direction e flex-wrap, ou seja, o 
+								resumo das propriedades flex-direction e flex-wrap
+							</p>
 						</div>
 						<ul>
 							<li>flex-flow: <em>row nowrap;</em> <span>// Coloca o conteúdo em linha e não permite a
@@ -135,15 +135,15 @@
 					
 				</section>
 
-				<section class="propriedade" id="justify-content">
+				<section id="justify-content">
 					<h2>5  justify-content</h2>
-					<div class="propriedade-content">
+					<div class="section-content">
 						<div>
-							<p>Alinha os itens flex no container de acordo com a direção. A propriedade só funciona se
-								os itens atuais não ocuparem todo o container. Isso significa que ao definir flex: 1; ou
-								algo similar nos itens, a propriedade não terá mais função</p>
-							<p>Excelente propriedade para ser usada em casos que você deseja alinhar um item na ponta
-								esquerda e outro na direita, como em um simples header com marca e navegação.</p>
+							<p>
+								Define como o navegador distribui o espaço entre e ao redor dos itens do 
+								flex no container de acordo com a direção do eixo definido (row, column, column-reverse...)
+							</p>
+							
 						</div>
 						<ul>
 							<li>justify-content: <em>flex-start;</em> <span>// Alinha os itens ao início do
@@ -161,14 +161,15 @@
 					
 				</section>
 
-				<section class="propriedade" id="align-items">
+				<section id="align-items">
 					<h2>6  align-items</h2>
-					<div class="propriedade-content">
+					<div class="section-content">
 						<div>
-							<p>O align-items alinha os flex itens de acordo com o eixo do container. O alinhamento é
-								diferente para quando os itens estão em colunas ou linhas.</p>
-							<p>Essa propriedade permite o tão sonhado alinhamento central no eixo vertical, algo que
-								antes só era possível com diferentes hacks.</p>
+							<p>
+								Alinha itens de acordo com o eixo  definido no flex container. O alinhamento é
+								diferente para quando os itens estão em colunas (column) ou linhas (row).
+							</p>
+
 						</div>
 						<ul>
 							<li>align-items: <em>stretch;</em> <span>// Valor padrão, ele que faz com que os flex itens
@@ -183,15 +184,12 @@
 					
 				</section>
 
-				<section class="propriedade" id="align-content">
+				<section id="align-content">
 					<h2>7  align-content</h2>
-					<div class="propriedade-content">
+					<div class="section-content">
 						<div>
-							<p>Alinha as linhas do container em relação ao eixo vertical. A propriedade só funciona se
-								existir mais de uma linha de flex-itens. Para isso o flex-wrap precisa ser wrap.</p>
-							<p>Além disso o efeito dela apenas será visualizado caso o container seja maior que a soma
-								das linhas dos itens. Isso significa que se você não definir height para o container, a
-								propriedade não influencia no layout.</p>
+							<p>O align-content alinha as linhas do container em relaçao ao eixo vertical.</p>
+							
 						</div>
 						<ul>
 							<li>align-content: <em>stretch;</em> <span>// Valor padrão, ele que faz com que os flex
@@ -213,26 +211,17 @@
 			</article>
 
 			<article class="main-item">
-				<header class="main-item-title">
+				<div class="item-title">
 					<h1>Flex Item</h1>
 					<p>Os Flex Itens são os filhos diretos do Flex Container, lembrado que uma tag se torna um flex
 						container a partir do momento que você definir display: flex.</p>
-					<p>É possível que um Flex Item seja também um Flex Container, basta definir display: flex nele.
-						Assim os filhos desse item também serão flex itens.</p>
-				</header>
-				<section class="propriedade" id="flex-grow">
+
+				</div>
+				<section id="flex-grow">
 					<h2>1  flex-grow</h2>
-					<div class="propriedade-content">
+					<div class="section-content">
 						<div>
-							<p>Define a habilidade de um flex item crescer. Por padrão o valor é zero, assim os flex
-								itens ocupam um tamanho máximo relacionado o conteúdo interno deles ou ao width
-								definido.</p>
-							<p>Ao definir 1 para todos os Flex Itens, eles tentarão ter a mesma largura e vão ocupar
-								100% do container. Digo tentarão pois caso um elemento possua um conteúdo muito largo,
-								ele irá respeitar o mesmo.</p>
-							<p>Se você tiver uma linha com quatro itens, onde três são flex-grow: 1 e um flex-grow: 2, o
-								flex-grow: 2 tentará ocupar 2 vezes mais espaço extra do que os outros elementos.</p>
-							<p>OBS: justify-content não funciona em items com flex-grow definido.</p>
+							<p> define a proporção com que um item deve crescer com relação aos seus irmão</p>
 						</div>
 						<ul>
 							<li>flex-grow: <em>número;</em> <span>// Basta definir um número</span></li>
@@ -242,13 +231,11 @@
 					
 				</section>
 
-				<section class="propriedade" id="flex-basis">
+				<section id="flex-basis">
 					<h2>2  flex-basis</h2>
-					<div class="propriedade-content">
+					<div class="section-content">
 						<div>
 							<p>Indica o tamanho inicial do flex item antes da distribuição do espaço restante.</p>
-							<p>Quando definimos o flex-grow: 1; e possuímos auto no basis, o valor restante para ocupar
-								o container é distribuído ao redor do conteúdo do flex-item.</p>
 						</div>
 						<ul>
 							<li>flex-basis: <em>auto;</em> <span>// Esse é o padrão, ele faz com que a largura da base
@@ -264,9 +251,9 @@
 					
 				</section>
 
-				<section class="propriedade" id="flex-shrink">
+				<section id="flex-shrink">
 					<h2>3  flex-shrink</h2>
-					<div class="propriedade-content">
+					<div class="section-content">
 						<div>
 							<p>Define a capacidade de redução de tamanho do item.</p>
 						</div>
@@ -284,9 +271,9 @@
 					
 				</section>
 
-				<section class="propriedade" id="flex">
+				<section id="flex">
 					<h2>4  flex</h2>
-					<div class="propriedade-content">
+					<div class="section-content">
 						<div>
 							<p>Atalho para as propriedades flex-grow, flex-shrink e flex-basis. Geralmente você verá a
 								propriedade flex nos flex itens ao invés de cada um dos valores separados.</p>
@@ -311,35 +298,39 @@
 					
 				</section>
 
-				<section class="propriedade" id="order">
+				<section id="order">
 					<h2>5  order</h2>
-					<div class="propriedade-content">
+					<div class="section-content">
 						<div>
-							<p>Modifica a ordem dos flex itens. Sempre do menor para o maior, assim order: 1, aparece na
-								frente de order: 5.</p>
+							<p>
+								A propriedade CSS order define a ordem de layout de um item em um flex ou contêiner de grade. 
+								Os itens em um contêiner são classificados pelo valor do pedido crescente e, a seguir, pela ordem do código-fonte.
+							</p>
 						</div>
+
 						<ul>
-							<li>order: <em>número;</em> <span>// Número para modificar a ordem padrão. Pode ser
-									negativo.</span></li>
-							<li>order: <em>0;</em> <span>// 0 é o valor padrão e isso significa que a ordem dos itens
-									será a ordem apresentada no HTML. Se você quiser colocar um item do meio da lista no
-									início da mesma, sem modificar os demais, o ideal é utilizar um valor negativo para
-									este item, já que todos os outros são 0.</span></li>
+							<li>order: <em>número;</em> <span>// o número também pode ser negativo.</span></li>
+							<li>order: <em>0;</em> 
+									<span>// 0 é o valor padrão e isso significa que a ordem dos itens
+										será a ordem apresentada no HTML.
+										Um exemplo de order é o Float que quando flotamos ele altera a ordem dos elementos.
+									</span>
+								</li>
 						</ul>
 					</div>
 					
 				</section>
 
-				<section class="propriedade" id="align-self">
+				<section id="align-self">
 					<h2>align-self</h2>
-					<div class="propriedade-content">
+					<div class="section-content">
 						<div>
-							<p>O align-self serve para definirmos o alinhamento específico de um único flex item dentro
-								do nosso container. Caso um valor seja atribuído, ele passara por cima do que for
-								atribuído no align-items do container.</p>
-							<p>Vale lembrar que o alinhamento acontece tanto em linha quanto em colunas. Por exemplo o
-								flex-start quando os itens estão em linhas, alinha o item ao topo da sua linha. Quando
-								em colunas, alinha o item ao início (esquerda) da coluna.</p>
+							<p>
+								A propriedade CSS align-self alinha itens-flex da linha flex alvo, 
+								sobreescrevendo o valor align-items. Se alguma dos eixos das margens do dado item está estabelecido 
+								como auto, então align-self é ignorado.
+							</p>
+							
 						</div>
 						<ul>
 							<li>align-self: <em>auto;</em> <span>// Valor inicial padrão. Vai respeitar o que for
@@ -351,6 +342,20 @@
 							<li>align-self: <em>baseline;</em> <span>// Alinha o item a linha de base.</span></li>
 							<li>align-self: <em>stretch;</em> <span>// Estica o item.</span></li>
 						</ul>
+					</div>					
+				</section>
+				<section id="align-self">
+					<h2>Para práticar</h2>
+					<div class="section-content">
+						<div>
+							
+							<p>
+								Aprenda na prática Flexbox jogando
+								<a href="http://flexboxfroggy.com/#pt-br" style="color: #00bee0;">
+									Flexbox Froggy
+								</a>
+							</p>
+						</div>						
 					</div>					
 				</section>
 			</article>

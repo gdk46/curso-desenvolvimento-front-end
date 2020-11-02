@@ -15,7 +15,6 @@ body {
 
 
 /* Sidebar */
-
 .sidebar {
 	width: 220px;
 	height: 100vh;
@@ -75,7 +74,7 @@ body {
 }
 
 /* Header */
-.header {
+header {
 	display: flex;
 	flex-wrap: wrap;
 	background: black;
@@ -85,73 +84,74 @@ body {
 }
 
 
-.header h1 {
+header h1 {
 	margin: 0px;
 	color: #00bee0;
 	min-width: 150px;
 }
 
 /* Main */
-.main {
+.content {
 	padding-right: 220px;
 }
 
-.main-item-title {
+.item-title {
 	padding: 20px;
 	background: #00bee0;
 	color: white;
 }
 
-.main-item-title h1 {
+.item-title h1 {
 	font-size: 4em;
 	line-height: 1;
 	margin: 0px;
 }
 
-.main-item-title p {
+.item-title p {
 	max-width: 500px;
 }
 
-/* Propriedade */
-.propriedade {
+/* section */
+section {
 	padding: 60px 50px 60px 20px;
 	color: #7a7d87;
 	background: #ffffff;
 }
 
-.propriedade:nth-child(even) {
+section:nth-child(even) {
 	background: #313131;
 	color: #C2C6D3;
 }
 
-.propriedade:nth-child(odd) h2 {
+section:nth-child(odd) h2 {
 	color: #00bee0;
 }
 
-.propriedade h2 {
+section h2 {
+	padding: 0 10px;
 	font-size: 3em;
 	margin: 0px;
 	line-height: 1;
 }
 
-.propriedade-content {
+.section-content {
 	display: flex;
 	flex-wrap: wrap;
 }
 
-.propriedade-content > div, .propriedade-content > ul {
+.section-content > div, .section-content > ul {
 	flex: 1;
 	padding: 0 10px;
 	margin-bottom: 1em;
-	min-width: 260px;
+	/* min-width: 260px; */
 }
 
-.propriedade-content ul {
+.section-content ul {
 	list-style: none;
 	border-left: 2px solid rgba(159, 156, 156, 0.14);
 }
 
-.propriedade-content li {
+.section-content li {
 	border-bottom: 2px solid rgba(159, 156, 156, 0.14);
 	padding-bottom: 10px;
 	color: #62a557;
@@ -160,22 +160,22 @@ body {
 	font-family: courier, monospace;
 }
 
-.propriedade-content li:last-child {
+.section-content li:last-child {
 	border: none;
 	margin-bottom: none;
 	padding-bottom: none;
 }
 
-.propriedade-content:nth-child(even) li {
+.section-content:nth-child(even) li {
 	color: #24db9e;
 }
 
-.propriedade-content ul em {
+.section-content ul em {
 	color: #6eb6c0;
 	font-style: normal;
 }
 
-.propriedade-content ul span {
+.section-content ul span {
 	color: #6e7f84;
 	display: block;
 	font-size: .875rem;
@@ -186,16 +186,17 @@ body {
 	.main {
 		padding-left: 0px;
 	}
-	.header {
+	header {
 		width: 100%;
 		padding: 10px 20px;
 		position: absolute;
 		top: 0px;
 	}
-	.header h1 {
+	header h1 {
 		text-align: left;
 	}
-	.propriedade h2, .main-item-title h1 {
+	section h2, .item-title h1 {
 		font-size: 2em;
 	}
+	
 }
